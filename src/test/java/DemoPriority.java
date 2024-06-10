@@ -2,31 +2,33 @@ import org.testng.annotations.Test;
 
 public class DemoPriority {
 
-	@Test
+	@Test(description = "verify")
 	public void C() {
 		System.out.println("C script");
-	}
-	
-	@Test(priority =- 1)
+	} 	
+	@Test(invocationCount = 10)
 	public void D() {
 		System.out.println("D script");
 	}
 	
+	
+//	@Test(timeOut = 4000)
+//	public void A() throws InterruptedException {
+//		Thread.sleep(3000);
+//		
+//	}
+//	
 	@Test
-	public void A() {
-		System.out.println("A script");
-	}
-	@Test(priority = -1)
-	public void B() {
-		System.out.println("B script");
+	public void verifyLogin() {
+		System.out.
 	}
 	
-	@Test(priority = -1)
-	public void E() {
+	@Test(dependsOnMethods = "verifyLogin",alwaysRun = true)
+	public void clickonCatalog() {
 		System.out.println("E script");
 	}
-	
-	
+//	
+//	
 }
 
 // B D E A C

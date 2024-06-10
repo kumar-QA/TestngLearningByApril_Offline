@@ -19,7 +19,7 @@ public class HandleWebTable {
 		driver.get("https://omayo.blogspot.com/");
 		System.out.println(driver.findElement(By.xpath("//table[@id=\"table1\"]/thead/tr/th[1]")).getText());
 	
-		System.out.println(driver.findElement(By.xpath("//table[@id=\"table1\"]/tbody/tr[3]/td[3]")).getText());
+	 	System.out.println(driver.findElement(By.xpath("//table[@id=\"table1\"]/tbody/tr[3]/td[3]")).getText());
 		
 	
 	}
@@ -56,13 +56,12 @@ public class HandleWebTable {
 		for (int j = 1; j <=columncount.size(); j++) {
 			
 		String data	=driver.findElement(By.xpath("//table[@id='table1']/tbody/tr["+i+"]/td["+j+"]")).getText();
-		
+		 
 		System.out.print(data+"  ");
 		}
 		System.out.println();
 
 	}
-	
 	}
 	
 	@Test
