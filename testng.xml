@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="p1" value="100"></parameter>
+		<parameter name="p2" value="200"></parameter>
+	<test thread-count="5" name="somkeTest">		
+		<classes>
+			<class name="demoparamas.A"></class>
+			<class name="demoparamas.B"></class>
+			<class name="demoparamas.C"></class>
+		</classes>
+	</test>
+</suite> <!--
+Suite -->

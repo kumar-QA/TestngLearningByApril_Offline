@@ -20,7 +20,9 @@ public class DemoPriority {
 //	
 	@Test
 	public void verifyLogin() {
-		System.out.
+		
+		int a[]= {10,20,30,40};
+	
 	}
 	
 	@Test(dependsOnMethods = "verifyLogin",alwaysRun = true)
